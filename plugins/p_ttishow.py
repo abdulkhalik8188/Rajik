@@ -38,8 +38,10 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton('📣 Uᴘᴅᴀᴛᴇs', url='https://t.me/+y5Ab2wjnCVFiMzk1'),
-                    InlineKeyboardButton('❓ Hᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
+                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                 ],[
+                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Attitude2688")
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -59,9 +61,10 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                                                                           InlineKeyboardButton('🍁 sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ​ 🍁', url=GRP_LNK)
+                                                                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                                                                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                                                                         ],[
-                                                                           InlineKeyboardButton('♕ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ♕', url=CHNL_LNK)
+                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/J_shree_ram")
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
@@ -86,9 +89,10 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('🍁 sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ​ 🍁', url=GRP_LNK)
+            InlineKeyboardButton('Support Group', url="https://t.me/+4nzja42ELQwzOWVl"),
+            InlineKeyboardButton('Owner', url="https://t.me/J_shree_ram")
         ],[
-            InlineKeyboardButton('♕ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ♕', url=CHNL_LNK)
+            InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -289,3 +293,4 @@ async def list_chats(bot, message):
         with open('chats.txt', 'w+') as outfile:
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
+            
